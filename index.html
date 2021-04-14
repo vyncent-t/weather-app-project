@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/styles.css">
+    <title>Weather app</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-light bg-light d-flex justify-content-center">
+      <div class="navbar-brand h1">
+        <h1 class="h1">WeatherMind</h1>
+      </div>
+    </nav>
+
+  <div class="d-flex container-fluid">
+    <aside class="col-3 p-3 me-0 " style="background-color: #eee">
+      <div class="btn-group d-flex flex-column bd-highlight mb-3">
+      <h3 class="h3">Search for a City:</h3>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="city name">
+        <button class="btn btn-outline-secondary" type="button" id="button-addon2">search</button>
+      </div>
+        <button type="button" class="btn btn-outline-dark" id="Austin">Austin</button>
+        <button type="button" class="btn btn-outline-dark" id="Chicago">Chicago</button>
+        <button type="button" class="btn btn-outline-dark" id="NewYork">New York</button>
+        <button type="button" class="btn btn-outline-dark" id="Orlando">Orlando</button>
+        <button type="button" class="btn btn-outline-dark" id="SanFrancisco">San Francisco</button>
+        <button type="button" class="btn btn-outline-dark" id="Seattle">Seattle</button>
+        <button type="button" class="btn btn-outline-dark" id="Denver">Denver</button>
+        <button type="button" class="btn btn-outline-dark" id="Atlanta">Atlanta</button>
+      </div>
+    </aside>
+
+    <main class="col-9">
+      <div class=" bg-light w-auto h-auto p-3 m-4">
+        <p>Temperature:</p>
+        <p> Humidity: </p>
+        <p> Wind Speed: </p>
+        <p> UV Index: </p>
+      </div>
+      
+      <div id="cards" class=" bg-light w-auto h-auto p-3 m-4 min-vh-75">
+        <h3 class="h3">Forcast</h3>
+          <div class="d-flex">
+            <div class="card bg-primary text-white m-3" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title">Date</h5>
+                <p class="card-text">Temp: </p>
+                <p class="card-text">Humidity: </p>
+              </div>
+            </div>
+            <div class="card bg-primary text-white m-3"" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title">Date</h5>
+                <p class="card-text">Temp: </p>
+                <p class="card-text">Humidity: </p>
+              </div>
+            </div>
+            <div class="card bg-primary text-white m-3"" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title">Date</h5>
+                <p class="card-text">Temp: </p>
+                <p class="card-text">Humidity: </p>
+              </div>
+            </div>
+            <div class="card bg-primary text-white m-3"" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title">Date</h5>
+                <p class="card-text">Temp: </p>
+                <p class="card-text">Humidity: </p>
+              </div>
+            </div>
+            <div class="card bg-primary text-white m-3"" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title">Date</h5>
+                <p class="card-text">Temp: </p>
+                <p class="card-text">Humidity: </p>
+              </div>
+            </div>
+          </div>
+      </div>
+   </main>
+  </div>
+
+<script  
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
+      integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG"
+      crossorigin="anonymous">
+</script>
+<script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
+      integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc"
+      crossorigin="anonymous">
+</script>
+
+  </body>
+</html>
