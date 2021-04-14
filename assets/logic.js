@@ -9,6 +9,8 @@ let currentCityHumid = $("#currentcityhumid");
 let currentCityWind = $("#currentcitywind");
 let currentCityUltra = $("#currentcityultra");
 
+let previouscities = $("#previouscity");
+
 let cardBody = document.querySelectorAll(".card-body");
 let cardTemp = document.querySelectorAll(".cardtemp");
 let cardMid = document.querySelectorAll(".cardmid");
@@ -20,9 +22,11 @@ let citybutton = $("#citybutton");
 citybutton.on("click", citySearch);
 
 // user search function
-function citySearch() {
+function citySearch(userCity) {
 	// using this api to return the name and location
 	userCityName = userInputCity.val();
+	localStorage.setItem(`cityOf${userCityName}`, userCityName);
+	oldCityButton();
 	let requestURL = `https://api.openweathermap.org/data/2.5/weather?q=${userCityName}&appid=${weatherAPIKey}`;
 	console.log(requestURL);
 
@@ -80,4 +84,22 @@ function citySearch() {
 		.catch((error) => {
 			console.log(`${error} error in retrieval`);
 		});
+}
+
+// I am trying to make it so that when I press search, it clears the search bar, adds the city to the list as a button, when I click the button, the value is pulled from local storage and runs the function with the city name, no repeating city names
+
+function oldCityButton() {
+	let cityButton = $("<button>");
+	cityButton.addClass("btn btn-outline-dark backCity");
+	cityButton.text(userCityName);
+	cityButton.val(userCityName);
+	cityButton.appendTo(previouscities);
+
+	let prevCity = $(".backCity");
+	prevCity.on("click", oldCityData);
+}
+
+function oldCityData(e) {
+	let pastcity = e.target.value;
+	citySearch(pastcity);
 }
