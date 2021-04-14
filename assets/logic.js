@@ -9,6 +9,11 @@ let currentCityHumid = $("#currentcityhumid");
 let currentCityWind = $("#currentcitywind");
 let currentCityUltra = $("#currentcityultra");
 
+let cardBody = document.querySelectorAll(".card-body");
+let cardTemp = document.querySelectorAll(".cardtemp");
+let cardMid = document.querySelectorAll(".cardmid");
+let cardWeek = document.querySelectorAll(".cardweek");
+
 let userInputCity = $("#usersearch");
 let userCityName = userInputCity.val();
 let citybutton = $("#citybutton");
@@ -60,6 +65,16 @@ function citySearch() {
 					currentCityWind.text(`${citydata.current.wind_speed} MPH`);
 					console.log(`${userCityName} current ultra violet: ${citydata.current.uvi}`);
 					currentCityUltra.text(citydata.current.uvi);
+
+					// logic to add data to cards
+					for (let i = 0; i < cardBody.length; i++) {
+						console.log(cardBody[i]);
+						cardTemp[i].innerText = `Temp: ${Math.floor(citydata.daily[i].temp.day)} F`;
+						cardMid[i].innerText = `Humidity: ${Math.floor(citydata.daily[i].humidity)} %`;
+						cardWeek[i].innerText = `${moment()
+							.add(i + 1, "days")
+							.format("M/D/YYYY")}`;
+					}
 				});
 		})
 		.catch((error) => {
