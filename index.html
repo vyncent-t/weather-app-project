@@ -25,31 +25,32 @@
       <div class="btn-group d-flex flex-column bd-highlight mb-3">
       <h3 class="h3">Search for a City:</h3>
       <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="city name">
-        <button class="btn btn-outline-secondary" type="button" id="button-addon2">search</button>
+        <input type="text" class="form-control" id="usersearch" placeholder="city name">
+        <button class="btn btn-outline-secondary" type="button" id="citybutton">search</button>
       </div>
       <div class="d-flex flex-column" id="previouscity">
         <button type="button" class="btn btn-outline-dark" id="Austin">Austin</button>
-        <button type="button" class="btn btn-outline-dark" id="Chicago">Chicago</button>
+        <!-- <button type="button" class="btn btn-outline-dark" id="Chicago">Chicago</button>
         <button type="button" class="btn btn-outline-dark" id="NewYork">New York</button>
         <button type="button" class="btn btn-outline-dark" id="Orlando">Orlando</button>
         <button type="button" class="btn btn-outline-dark" id="SanFrancisco">San Francisco</button>
         <button type="button" class="btn btn-outline-dark" id="Seattle">Seattle</button>
         <button type="button" class="btn btn-outline-dark" id="Denver">Denver</button>
-        <button type="button" class="btn btn-outline-dark" id="Atlanta">Atlanta</button>
+        <button type="button" class="btn btn-outline-dark" id="Atlanta">Atlanta</button> -->
       </div>
     </aside>
 
     <main class="col-9">
       <div class=" bg-light w-auto h-auto p-3 m-4">
-        <p>Temperature:</p>
-        <p> Humidity: </p>
-        <p> Wind Speed: </p>
-        <p> UV Index: </p>
+        <h3 class="h3"> <span id="currentcityname"></span> <span id="currentcitytime"></span></h3>
+        <p>Temperature: <span id="currentcitytemp"></span></p>
+        <p> Humidity: <span id="currentcityhumid"></span></p>
+        <p> Wind Speed: <span id="currentcitywind"></span></p>
+        <p> UV Index: <span id="currentcityultra"></span></p>
       </div>
       
       <div id="cards" class=" bg-light w-auto h-auto p-3 m-4 min-vh-75">
-        <h3 class="h3">Forcast</h3>
+        <h3 class="h3">5-day Forecast</h3>
           <div class="d-flex">
             <div class="card bg-primary text-white m-3" style="width: 18rem;">
               <div class="card-body">
@@ -96,11 +97,17 @@
       integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG"
       crossorigin="anonymous">
 </script>
+
 <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
       integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc"
       crossorigin="anonymous">
 </script>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+
+<script src="assets/logic.js"></script>
   </body>
 </html>
