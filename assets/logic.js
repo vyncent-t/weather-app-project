@@ -74,7 +74,7 @@ else if (currentCityUltra.text() <= 2) {
 	currentCityUltra.addClass('bg-success p-2 rounded')
 } else if (currentCityUltra.text() >= 8) {
 	currentCityUltra.addClass('bg-danger p-2 rounded')
-} else if (currentCityUltra.text() >= 2 && currentCityUltra.text() <= 8) {currentCityUltra.addClass('bg-light p-2 rounded')}
+} else if (currentCityUltra.text() >= 2 && currentCityUltra.text() <= 8) {currentCityUltra.addClass('bg-info p-2 rounded')}
 console.log(currentCityUltra.text())
 }
 // user search function

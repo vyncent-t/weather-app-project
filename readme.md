@@ -2,4 +2,6 @@ This project is a single page weather app that a user can input the name of a ci
 
 
 LINK: https://vyncent-t.github.io/weathermind-app/
-SCREENSHOT: ![image](https://user-images.githubusercontent.com/78232183/115091675-2b3cbe80-9ee6-11eb-8754-e4094f0c2eaf.png)
+
+
+SCREENSHOT: ![image](https://user-images.githubusercontent.com/78232183/115094913-4f4fce00-9eed-11eb-84ac-f5a66fda12ff.png)
