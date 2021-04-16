@@ -65,6 +65,17 @@ function getCityInformation(locationdata) {
 					.format("M/D/YYYY")}`;
 			}
 		});
+
+
+if (!currentCityUltra.text()) {
+console.log('ye')
+}
+else if (currentCityUltra.text() <= 2) {
+	currentCityUltra.addClass('bg-success p-2 rounded')
+} else if (currentCityUltra.text() >= 8) {
+	currentCityUltra.addClass('bg-danger p-2 rounded')
+} else if (currentCityUltra.text() >= 2 && currentCityUltra.text() <= 8) {currentCityUltra.addClass('bg-light p-2 rounded')}
+console.log(currentCityUltra.text())
 }
 // user search function
 function citySearch(event) {
@@ -116,5 +127,3 @@ function oldCityButton(cityLocation, name) {
 	cityButton.text(name);
 	cityButton.appendTo(previouscities);
 }
-
-
